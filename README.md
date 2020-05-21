@@ -27,6 +27,12 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+## 构建项目步骤
+
+在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里开始排查，也是流程记录。
+
+### px转换rem
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
@@ -56,9 +62,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-## 构建项目步骤
-
-在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里开始排查，也是流程记录。
-
-### px转换rem
