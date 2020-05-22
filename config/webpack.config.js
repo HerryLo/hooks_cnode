@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const path = require('path');
@@ -100,6 +100,11 @@ module.exports = function(webpackEnv) {
               },
               stage: 3,
             }),
+            // add pxtorem
+            require('postcss-pxtorem')({
+              rootValue: 100,
+              propWhiteList: []
+            }),
             // Adds PostCSS Normalize as the reset css with default options,
             // so that it honors browserslist config in package.json
             // which in turn let's users customize the target behavior as per their needs.
@@ -107,7 +112,7 @@ module.exports = function(webpackEnv) {
           ],
           sourceMap: isEnvProduction && shouldUseSourceMap,
         },
-      },
+      }
     ].filter(Boolean);
     if (preProcessor) {
       loaders.push(
