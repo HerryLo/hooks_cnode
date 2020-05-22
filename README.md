@@ -1,37 +1,36 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`run` 开发项目，[http://localhost:3000](http://localhost:3000) 预览
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`test` 运行测试用例，[running tests](https://facebook.github.io/create-react-app/docs/running-tests)查看更多信息
 
 ### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`build` 打包构建生产环境目标文件，[deployment](https://facebook.github.io/create-react-app/docs/deployment)查看更多部署信息
 
 ## 项目工程
 
 在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里排查。
 
+1. px转换rem
+2. css支持外部文件
+3. react-router路由
+4. import按需加载
+5. ts语法支持
+
 ### px转换rem
 
 ### css支持外部文件
 
-### 路由系统
+### react-router路由
 
-### ts语法
+### import按需加载
+
+### ts语法支持
 
 ## Learn More
 
