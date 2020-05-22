@@ -9,9 +9,6 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.<br />
@@ -22,14 +19,11 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## 构建项目步骤
+## 项目工程
 
-在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里开始排查，也是流程记录。
+在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里排查。
 
 ### px转换rem
 
