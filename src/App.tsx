@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './style/App.scss';
-import HomePage from './pages/Home'
+import IndexPage from './pages/Index'
 
 function App(): React.ReactElement {
   return (
     <div className="App">
-      <HomePage />
+      <IndexPage />
     </div>
   );
 }

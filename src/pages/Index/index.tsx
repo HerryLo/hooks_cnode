@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-function HomePage(): React.ReactElement {
+function IndexPage(): React.ReactElement {
     return (
         <div className="Home">
             Home
@@ -8,4 +8,4 @@ function HomePage(): React.ReactElement {
     )
 }
 
-export default HomePage;
+export default IndexPage;
