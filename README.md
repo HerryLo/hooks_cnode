@@ -16,12 +16,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里排查。
 
-1. px转换rem
-2. scss样式支持
-3. react-router-dom
-4. import按需加载
-5. css支持外部文件
-6. ts语法支持
+```c
+* px转换rem
+* scss样式支持
+* ts语法支持
+* eslint检测
+* react-router-dom
+* import按需加载
+* css支持外部文件
+```
 
 ### px转换rem
 
@@ -79,13 +82,39 @@ body {
 
 添加 `yarn add node-sass`包，目前的配置create-react-app中 已经支持scss语法，只需要按照loader即可。
 
-### react-router-dom
+### ts语法支持
+
+添加 `yarn add typescript @types/node @types/react @types/react-dom @types/jest`;
+
+项目根目录运行`tsc --init`;
+
+webpack配置文件中添加：
+```javascript
+{
+    test: /\.ts(x?)$/,
+    exclude: /node_modules/,
+    use: [
+        {
+            loader: "ts-loader",
+            options: {
+                transpileOnly: true,
+            }
+        },
+    ]
+}
+```
+
+### eslint检测
+
+添加 `yarn add eslint --dev`
+
+`npx eslint --init`
+
+### react-router-dom路由
 
 ### import按需加载
 
 ### css支持外部文件
-
-### ts语法支持
 
 ## Learn More
 
