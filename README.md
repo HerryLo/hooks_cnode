@@ -80,7 +80,7 @@ body {
 
 ### scss样式支持
 
-添加 `yarn add node-sass`包，目前的配置create-react-app中 已经支持scss语法，只需要按照loader即可。
+添加 `yarn add node-sass`包，目前的配置create-react-app中 已经支持scss-loader，只需要安装`node-sass`即可。
 
 ### ts语法支持
 
@@ -106,7 +106,7 @@ webpack配置文件中添加：
 
 ### eslint检测
 
-添加 `yarn add eslint --dev`
+添加 `yarn add eslint eslint-plugin-react --dev`
 
 `npx eslint --init`
 
