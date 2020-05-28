@@ -112,6 +112,38 @@ webpack配置文件中添加：
 
 ### react-router-dom路由
 
+添加 `yarn add react-router-dom @types/react-router-dom`
+
+```javascript
+// app.tsx
+import {
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+function App(){
+    return (
+        <Switch>
+            <Route exact path="/">
+                <IndexPage />
+            </Route>
+            <Route path="/detail">
+                <DetailPage />
+            </Route>
+        </Switch>
+    )
+}
+
+// index.tsx
+import { BrowserRouter as Router } from "react-router-dom";
+
+<Router>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+</Router>
+```
+
 ### import按需加载
 
 ### css支持外部文件
