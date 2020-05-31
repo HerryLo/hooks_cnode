@@ -11,7 +11,6 @@ function IndexPage(): React.ReactElement {
         const fetchData = async () => {
             const result: IndexTopicsResponse = await model.getIndexData();
             const newData: Array<IndexTopicsItem> = result.data;
-            console.log(newData);
             if(result.success == true) {
                 setData(newData);
             }
