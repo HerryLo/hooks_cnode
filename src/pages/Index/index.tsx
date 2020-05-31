@@ -6,9 +6,11 @@ const model: any = new IndexModel();
 function IndexPage(): React.ReactElement {
 
     React.useEffect(() => {
-        model.getIndexData().then((result: any) => {
-            console.log(result)
-        })
+        const fetchData = async () => {
+            const result = await model.getIndexData();
+            console.log(result);
+        };
+        fetchData();
     }, [])
 
     return (
