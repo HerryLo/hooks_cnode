@@ -1,19 +1,20 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { RequestHost } from './config'
 
 class Request {
+    /**
+     * 域名host
+     */
     host = RequestHost
 
-    get(url: string): Promise<any> {
-        return new Promise((resolve, reject)=> {
-            axios.get(this.host+url)
-            .then(function (response: any) {
-                resolve(response.data);
-            })
-            .catch(function (error: any) {
-                reject(error);
-            });
-        })
+    /**
+     * Get 请求
+     * @param url 
+     */
+    async get<T>(url: string) {
+        const res: AxiosResponse<T> = await axios.get(this.host+url);
+        const data = res.data;
+        return data;
     }
 }
 

@@ -1,9 +1,9 @@
 export interface IndexTopicsResponse {
-    data: IndexTopicsData
-    success?: boolean
+    data: Array<IndexTopicsItem>
+    success: boolean
 }
 
-interface IndexTopicsData {
+export interface IndexTopicsItem {
     author?: Author
     avatar_url?: string
     loginname?: string

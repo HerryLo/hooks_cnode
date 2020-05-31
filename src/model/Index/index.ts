@@ -1,16 +1,23 @@
 import Request from '../../utils/request';
 import { IndexTopicsResponse } from '../../utils/request/IndexTopicsResponse'
 
-export default class IndexModel {
-    async getIndexData(): Promise<IndexTopicsResponse | undefined> {
-        try {
-            const res: IndexTopicsResponse = await Request.get('/api/v1/topics');
-            console.log(res);
-            if(res.success == true) {
-                return res;
-            }
-        }catch(err) {
-            console.log(err);
-        }
+/**
+ * IndexModel 抽象类
+ */
+export abstract class IndexModelClass {
+    /**
+     * 获取首页话题数据
+     */
+    abstract getIndexData(): Promise<IndexTopicsResponse> 
+}
+
+/**
+ * 首页 IndexPage Model
+ * 
+ */
+export default class IndexModel extends IndexModelClass {
+    public async getIndexData(): Promise<IndexTopicsResponse> {
+        const res: IndexTopicsResponse = await Request.get<IndexTopicsResponse>('/api/v1/topics');
+        return res;
     }
 }
