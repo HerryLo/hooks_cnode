@@ -5,9 +5,11 @@ const model: any = new IndexModel();
 
 function IndexPage(): React.ReactElement {
 
-    // const res = await model.getIndexData();
-
-    // console.log(res);
+    React.useEffect(() => {
+        model.getIndexData().then((result: any) => {
+            console.log(result)
+        })
+    }, [])
 
     return (
         <div className="Home">

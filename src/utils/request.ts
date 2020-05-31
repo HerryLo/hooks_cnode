@@ -8,10 +8,10 @@ class Request {
         return new Promise((resolve, reject)=> {
             axios.get(this.host+url)
             .then(function (response: any) {
-                return resolve(response);
+                resolve(response.data);
             })
             .catch(function (error: any) {
-                return reject(error);
+                reject(error);
             });
         })
     }
