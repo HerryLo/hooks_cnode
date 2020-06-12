@@ -1,3 +1,6 @@
+![](https://img.shields.io/badge/-react%4016.13.1-brightgreen)
+![](https://img.shields.io/badge/-typescript%4016.13.1-brightgreen)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### `yarn start`
