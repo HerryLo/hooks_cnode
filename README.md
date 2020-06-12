@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/-react%4016.13.1-brightgreen)
 ![](https://img.shields.io/badge/-typescript%403.9.3-brightgreen)
-![](https://img.shields.io/badge/-webpack%404.9.2-brightgreen)
+![](https://img.shields.io/badge/-webpack%404.42.0-brightgreen)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
