@@ -1,6 +1,14 @@
 import axios, { AxiosResponse } from 'axios';
 import { RequestHost } from './config'
 
+axios.interceptors.request.use(function (config) {
+    return config;
+}, function(err) {console.log(err)});
+
+axios.interceptors.response.use(function (res) {
+    return res;
+}, function(err) {console.log(err)});
+
 class Request {
     /**
      * 域名host

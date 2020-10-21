@@ -1,19 +1,18 @@
 import * as React from 'react';
 import IndexModel, { IndexModelClass } from '../../model/Index'
-import { IndexTopicsResponse, IndexTopicsItem } from '../../utils/request/IndexTopicsResponse'
+// import { IndexTopicsResponse, IndexTopicsItem } from '../../utils/request/IndexTopicsResponse'
 
 const model: IndexModelClass = new IndexModel();
 
 function IndexPage(): React.ReactElement {
-    const [data, setData] = React.useState<Array<IndexTopicsItem>>([]);
+    // eslint-disable-next-line
+    const [data, setData] = React.useState<Array<any>>([]);
 
     React.useEffect(() => {
         const fetchData = async () => {
-            const result: IndexTopicsResponse = await model.getIndexData();
-            const newData: Array<IndexTopicsItem> = result.data;
-            if(result.success == true) {
-                setData(newData);
-            }
+            const result = await model.getAlgoliaSearch({query: 'redex'});
+            const newData = result.hits;
+            setData(newData);
         };
         fetchData();
     }, [])
@@ -21,9 +20,9 @@ function IndexPage(): React.ReactElement {
     return (
         <div className="Home">
             {
-                data.map((item: IndexTopicsItem )=> {
+                data.map((item )=> {
                     return (
-                        <div key={item.id}>{item.title}</div>
+                        <div key={item.objectID}>{item.title}</div>
                     )
                 })
             }
