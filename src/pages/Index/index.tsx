@@ -20,7 +20,7 @@ function IndexPage(): React.ReactElement {
             {
                 data.map((item )=> {
                     return (
-                        <div key={item.objectID}>{item.title}</div>
+                        <div className="title" key={item.objectID}>{item.title}</div>
                     )
                 })
             }
