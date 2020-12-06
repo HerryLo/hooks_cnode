@@ -1,5 +1,9 @@
 import Request from '../../utils/request';
-// import { IndexTopicsResponse } from '../../utils/request/IndexTopicsResponse'
+import { searchApiResponse } from '../../utils/request/searchResponse'
+
+interface Option {
+    query: string
+}
 
 /**
  * IndexModel 抽象类
@@ -8,13 +12,7 @@ export abstract class IndexModelClass {
     /**
      * 获取首页话题数据
      */
-    // abstract getIndexData(): Promise<IndexTopicsResponse> 
-
-    /**
-     * 获取首页话题数据
-     */
-    // eslint-disable-next-line
-    abstract getAlgoliaSearch(option: any): Promise<any>
+    abstract getAlgoliaSearch(option: Option): Promise<searchApiResponse>
 }
 
 /**
@@ -22,15 +20,8 @@ export abstract class IndexModelClass {
  * 
  */
 export default class IndexModel extends IndexModelClass {
-    // public async getIndexData(): Promise<IndexTopicsResponse> {
-    //     const res: IndexTopicsResponse = await Request.get<IndexTopicsResponse>('/api/v1/topics');
-    //     return res;
-    // }
-
-    // eslint-disable-next-line
-    public async getAlgoliaSearch(option: any): Promise<any> {
-        // eslint-disable-next-line
-        const res = await Request.get<any>(`/api/v1/search?query=${option.query}`);
+    public async getAlgoliaSearch(option: Option): Promise<searchApiResponse> {
+        const res: searchApiResponse  = await Request.get<searchApiResponse>(`/api/v1/search?query=${option.query}`);
         return res;
     }
 }

@@ -1,17 +1,15 @@
 import * as React from 'react';
 import IndexModel, { IndexModelClass } from '../../model/Index'
-// import { IndexTopicsResponse, IndexTopicsItem } from '../../utils/request/IndexTopicsResponse'
-
-const model: IndexModelClass = new IndexModel();
+import { searchApiResponse, searchHitsItem } from '../../utils/request/searchResponse'
 
 function IndexPage(): React.ReactElement {
-    // eslint-disable-next-line
-    const [data, setData] = React.useState<Array<any>>([]);
+    const model: IndexModelClass = new IndexModel();
+    const [data, setData] = React.useState<Array<searchHitsItem>>([]);
 
     React.useEffect(() => {
         const fetchData = async () => {
-            const result = await model.getAlgoliaSearch({query: 'redex'});
-            const newData = result.hits;
+            const result: searchApiResponse  = await model.getAlgoliaSearch({query: 'redex'});
+            const newData: Array<searchHitsItem> = result.hits;
             setData(newData);
         };
         fetchData();
