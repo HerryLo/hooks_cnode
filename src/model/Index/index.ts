@@ -1,4 +1,4 @@
-import Request from '../../utils/request';
+import request from '../../utils/request';
 import { searchApiResponse } from '../../utils/request/searchResponse'
 
 interface Option {
@@ -21,7 +21,7 @@ export abstract class IndexModelClass {
  */
 export default class IndexModel extends IndexModelClass {
     public async getAlgoliaSearch(option: Option): Promise<searchApiResponse> {
-        const res: searchApiResponse  = await Request.get<searchApiResponse>(`/api/v1/search?query=${option.query}`);
+        const res: searchApiResponse  = await request.get<searchApiResponse>(`/api/v1/search?query=${option.query}`);
         return res;
     }
 }
