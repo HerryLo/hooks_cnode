@@ -4,21 +4,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `yarn start`
+以下只是包含前端项目构建的过程。但在实际项目中，我们需要考虑的更多，说的比较多的就如：前端工程化，工程化包括人员搭配、技术选型、框架搭建、组件和模块化、项目构建和项目文档，还包括测试、运维、迭代等，都可以算作工程化的一部分，而前端工程化，也只是在工程化前加了一个前缀，核心本身还是工程化，其实也不区分前端、后端、移动、web。
 
-`run` 开发项目，[http://localhost:3000](http://localhost:3000) 预览
+## 项目构建
 
-### `yarn test`
-
-`test` 运行测试用例，[running tests](https://facebook.github.io/create-react-app/docs/running-tests)查看更多信息
-
-### `yarn build`
-
-`build` 打包构建生产环境目标文件，[deployment](https://facebook.github.io/create-react-app/docs/deployment)查看更多部署信息
-
-## 项目工程
-
-在构建项目中，将构建步骤记录📝下来，防备出现问题时不知道从哪里排查。
+在构建项目中，将构建步骤记录📝下来，确认配置的细节。
 
 ```c
 * px转换rem
