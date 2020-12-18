@@ -1,6 +1,8 @@
 import * as React from 'react';
 import IndexModel, { IndexModelClass } from '../../model/Index'
 import { searchApiResponse, searchHitsItem } from '../../utils/request/searchResponse'
+import { ContentItem } from './compontent/contentItem';
+import './index.scss';
 
 function IndexPage(): React.ReactElement {
     const model: IndexModelClass = new IndexModel();
@@ -17,13 +19,15 @@ function IndexPage(): React.ReactElement {
 
     return (
         <div className="Home">
+            <div className="content-wrap">
             {
                 data.map((item )=> {
                     return (
-                        <div className="title" key={item.objectID}>{item.title}</div>
+                        <ContentItem item={item} key={item.objectID}></ContentItem>
                     )
                 })
             }
+            </div>
         </div>
     )
 }
