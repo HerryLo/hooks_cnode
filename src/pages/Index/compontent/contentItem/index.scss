@@ -1,0 +1,21 @@
+
+
+.item-content {
+    padding: 20px 0;
+
+    .title {
+        font-size: 35px;
+        font-weight: 600;
+        text-align: left;
+        margin: 20px 0 10px;
+        color: #2e3135;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .author {
+        text-align: left; 
+        color: #b2bac2;
+    }
+}
