@@ -13,7 +13,7 @@ export interface searchApiResponse {
 export interface searchHitsItem {
     author: string
     comment_text?: null
-    created_at: string
+    created_at?: Date
     created_at_i: number
     num_comments: number
     objectID: string
