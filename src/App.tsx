@@ -6,8 +6,11 @@ import {
 import './style/App.scss';
 import IndexPage from './pages/Index'
 import DetailPage from "./pages/Detail";
+import VConsole from  'vconsole';
 
-function App(): React.ReactElement {
+new VConsole();
+
+function App(): React.ReactElement {  
   return (
     <div className="App">
       <Switch>

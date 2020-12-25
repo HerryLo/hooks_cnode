@@ -3683,6 +3683,11 @@ data-urls@^1.0.0, data-urls@^1.1.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
+dateformat@^4.4.1:
+  version "4.4.1"
+  resolved "https://nexus3.yit.com/repository/npm-public/dateformat/-/dateformat-4.4.1.tgz#c6b3b821588f36826735c346148424d7a39007c3"
+  integrity sha1-xrO4IViPNoJnNcNGFIQk16OQB8M=
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -11174,6 +11179,11 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+vconsole@^3.3.4:
+  version "3.3.4"
+  resolved "https://nexus3.yit.com/repository/npm-public/vconsole/-/vconsole-3.3.4.tgz#a7dacd8887b3d3e902e8d18425cda56c34e77f51"
+  integrity sha1-p9rNiIez0+kC6NGEJc2lbDTnf1E=
 
 vendors@^1.0.0:
   version "1.0.4"
