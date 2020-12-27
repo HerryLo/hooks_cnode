@@ -1,0 +1,16 @@
+.index-search-input {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input {
+        width: 75%;
+        padding: 20px;
+    }
+
+    .button {
+        height: 75px;
+        width: 110px;
+    }
+}
