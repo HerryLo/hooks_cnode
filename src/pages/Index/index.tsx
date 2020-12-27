@@ -3,6 +3,7 @@ import IndexModel, { IndexModelClass } from '../../model/Index'
 import { searchApiResponse, searchHitsItem } from '../../utils/request/searchResponse'
 import { ContentItem } from './component/contentItem';
 import { SearchInput } from './component/searchInput';
+import ScrollToLoad from "../../component/ScrollToLoad";
 import './index.scss';
 
 interface IProp {
@@ -12,6 +13,7 @@ interface IState {
     data: Array<searchHitsItem>
     key: string,
     prekey: string
+    isLoad: boolean
 }
 
 const model = new IndexModel();
@@ -22,12 +24,14 @@ class IndexPage extends React.Component<IProp, IState>{
         this.state = {
             data: [],
             key: "react",
-            prekey: "react"
+            prekey: "react",
+            isLoad: false
         }
 
         this.onChangeKey = this.onChangeKey.bind(this);
         this.getSearchList = this.getSearchList.bind(this);
         this.onSeachSubmit = this.onSeachSubmit.bind(this);
+        this.loadNext = this.loadNext.bind(this);
     }
 
     componentDidMount() {
@@ -68,24 +72,42 @@ class IndexPage extends React.Component<IProp, IState>{
             this.getSearchList(key);
         }
     }
+
+    public loadNext() {
+        this.setState({
+            isLoad: true
+        })
+        console.log('loadNext: ', '触底了');
+        setTimeout(()=> {
+            this.setState({
+                isLoad: false
+            })
+        }, 1000)
+    }
     
     render() {
-        const { data, key } = this.state;
+        const { data, key, isLoad } = this.state;
         return (
             <div className="index-search">
                 <SearchInput 
                     defaultKey={key}
                     onSeachChange={this.onChangeKey}
                     onSeachSubmit={this.onSeachSubmit} />
-                <div className="content-wrap">
-                    {
-                        data.map((item: searchHitsItem)=> {
-                            return (
-                                <ContentItem item={item} key={item.objectID} />
-                            )
-                        })
-                    }
-                </div>
+                <ScrollToLoad
+                    loadNext={this.loadNext}
+                    toBottomHeight={10}
+                    useBodyScroll
+                    loading={isLoad}>
+                    <div className="content-wrap">
+                        {
+                            data.map((item: searchHitsItem)=> {
+                                return (
+                                    <ContentItem item={item} key={item.objectID} />
+                                )
+                            })
+                        }
+                    </div>
+                </ScrollToLoad>
             </div>
         )
     
