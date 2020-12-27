@@ -67,15 +67,12 @@ require('postcss-pxtorem')({
 ```css
 body {
     ...
-    max-width: 750px;
+    max-width: 750px;max-width
     min-width: 320px;
 }
 ```
 
 ### scss样式支持
-
-添加 `yarn add node-sass`包，目前的配置create-react-app中 已经支持scss-loader，只需要安装`node-sass`即可。
-
 ### ts语法支持
 
 添加 `yarn add typescript @types/node @types/react @types/react-dom @types/jest`;
@@ -96,6 +93,7 @@ webpack配置文件中添加：
         },
     ]
 }
+
 ```
 
 ### eslint检测
@@ -104,6 +102,7 @@ webpack配置文件中添加：
 
 `npx eslint --init`
 
+`yarn eslint . --ext .ts,.tsx` 可用于检查目前tx、tsx文件中中不符合的规范；
 ### react-router-dom路由
 
 添加 `yarn add react-router-dom @types/react-router-dom`

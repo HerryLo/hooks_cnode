@@ -22,6 +22,7 @@ export abstract class IndexModelClass {
 export default class IndexModel extends IndexModelClass {
     public async getAlgoliaSearch(option: Option): Promise<searchApiResponse> {
         const res: searchApiResponse  = await request.get<searchApiResponse>(`/api/v1/search?query=${option.query}`);
+        console.log(res);
         return res;
     }
 }
