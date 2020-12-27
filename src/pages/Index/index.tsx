@@ -92,4 +92,34 @@ class IndexPage extends React.Component<IProp, IState>{
     }
 }
 
+// function IndexPage(): React.ReactElement {
+//     const model: IndexModelClass = new IndexModel();
+//     const [data, setData] = React.useState<Array<searchHitsItem>>([]);
+//     const [key, setKey] = React.useState<string>('redex');
+
+//     React.useEffect(() => {
+//         const fetchData = async () => {
+//             const result: searchApiResponse  = await model.getAlgoliaSearch({query: key});
+//             const newData: Array<searchHitsItem> = result.hits;
+//             setData(newData);
+//         };
+//         fetchData();
+//     }, [])
+
+//     return (
+//         <div className="index-search">
+//             <SearchInput />
+//             <div className="content-wrap">
+//             {
+//                 data.map((item )=> {
+//                     return (
+//                         <ContentItem item={item} key={item.objectID} />
+//                     )
+//                 })
+//             }
+//             </div>
+//         </div>
+//     )
+// }
+
 export default IndexPage;
