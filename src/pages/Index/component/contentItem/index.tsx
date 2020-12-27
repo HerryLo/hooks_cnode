@@ -10,7 +10,7 @@ export function ContentItem(props: props): React.ReactElement {
     const item:searchHitsItem  = props.item;
     const created_time  = dateformat(item.created_at, "yyyy/mm/dd hh:MM ")
     return (
-        <div className="item-content" key={item.objectID}>
+        <div className="index-search-item-content" key={item.objectID}>
             <div className="author">
                 {item.author} · {created_time}
             </div>
