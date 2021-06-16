@@ -26,7 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 添加 `yarn add postcss-pxtorem`包，转换px为rem
 
-需要在html中添加如下代码，为html设置根元素的fon-size
+需要在html中添加如下代码，为html设置根元素的fon-size，以下代码的UE设计稿参考的是750px：
 ```javascript
 var uAgent = window.navigator.userAgent,
         isIOS = uAgent.match(/iphone/i),
@@ -65,14 +65,17 @@ require('postcss-pxtorem')({
     propWhiteList: []
 })
 ```
-
 ```css
 body {
     ...
-    max-width: 750px;max-width
+    max-width: 750px;
     min-width: 320px;
 }
 ```
+
+以上配置可以这样通俗理解：通过`postcss-pxtorem`插件配置` rootValue: 100`可知道，UE图为750px的设计稿，1rem=100px，这个会在代码转换时生效，会按照你UE稿实际px值转换，例如：宽度为100px的div标签，转换后的样式代码就是1rem。此时的rem转换基准已经确定，还需要确定的就是`html`根节点`font-size`的值，那如何确定尼？根据不同设备的实际宽度除以750，我们就可得它们的倍数关系，既然在750px下1rem等于100px，现在有了倍数直接换算就可以了，倍数乘以100px就是当前设备实际的1rem的值。那么可以得到`html`根节点`font-size`的值实际等于 （当前设备视口实际宽度除以750）乘以100px，简化就是 当前设备视口实际宽度除以7.5。
+
+
 
 ### scss样式支持
 ### ts语法支持
